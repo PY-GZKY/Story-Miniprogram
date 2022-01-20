@@ -24,9 +24,9 @@
       <view class="content">
         <view class="header">
           {{ item.header }}
-          <view class="sub-header">
+          <!-- <view class="sub-header">
             {{ item.sub_header }}
-          </view>
+          </view> -->
         </view>
         <view class="description">{{ item.description }}</view>
         <view class="meta">{{ item.meta.price }}</view>
