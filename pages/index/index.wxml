@@ -3,8 +3,8 @@
     <swiper-item>
       <image src="{{ item.image }}" mode="aspectFill" />
       <view class="content centered">
-        <view class="sub-header">{{ item.sub_header }}</view>
-        <view class="header">{{ item.header }}</view>
+        <!-- <view class="sub-header">{{ item.sub_header }}</view> -->
+        <view class="header">年青集</view>
         <view class="description">{{ item.description }}</view>
         <!-- <view class="action">
           <button class="button" bindtap="testDrive">预约试驾</button>
