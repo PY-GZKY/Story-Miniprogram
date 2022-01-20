@@ -1,4 +1,4 @@
-<view class="section">
+<!-- <view class="section"> -->
   <view class="cover">
     <image src="{{ entity.image }}" mode="aspectFill" />
     <view class="content">
@@ -10,8 +10,8 @@
       </view>
       <view class="meta">{{ entity.meta.price }}</view>
     </view>
-  </view>
-  <view class="spec">
+  <!-- </view> -->
+  <!-- <view class="spec">
     <view class="item">
       <view class="header">
         二氧化碳排放
@@ -30,11 +30,11 @@
         升/百公里
       </view>
     </view>
-  </view>
-  <view class="action">
+  </view> -->
+  <!-- <view class="action">
     <view class="description">{{ entity.description }}</view>
     <button class="button primary" bindtap="testDrive">预约试驾</button>
-  </view>
+  </view> -->
 </view>
 <swiper class="section story white" indicator-dots="{{ true }}">
   <block wx:for="{{ entity.meta.exterior_design }}">
@@ -53,7 +53,7 @@
     </swiper-item>
   </block>
 </swiper>
-<swiper class="section story" indicator-dots="{{ true }}">
+<!-- <swiper class="section story" indicator-dots="{{ true }}">
   <block wx:for="{{ entity.meta.interior_design }}">
     <swiper-item>
       <view class="content">
@@ -69,4 +69,4 @@
         mode="aspectFill" />
     </swiper-item>
   </block>
-</swiper>
+</swiper> -->

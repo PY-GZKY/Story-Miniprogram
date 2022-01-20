@@ -12,5 +12,5 @@ page {
 }
 
 .section {
-  height: 100vh;
+  height: 70vh;
 }
