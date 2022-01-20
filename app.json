@@ -6,7 +6,7 @@
     "pages/vehicles/show"
   ],
   "window": {
-    "navigationBarTitleText": "宁皓汽车",
+    "navigationBarTitleText": "故事集",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black"
   },
