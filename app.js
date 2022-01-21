@@ -11,7 +11,7 @@ App({
 
   slides() {
     wx.request({
-      url: 'http://127.0.0.1:8000/slides',
+      url: 'https://tplan.cc/slides',
       success: (response) => {
         Object.assign(this.globalData.slides, response.data)
         // console.log("slides: ", this.globalData.slides);
@@ -25,7 +25,7 @@ App({
 
   vehicles() {
     wx.request({
-      url: 'http://127.0.0.1:8000/vehicles',
+      url: 'https://tplan.cc/vehicles',
       success: (response) => {
         Object.assign(this.globalData.vehicles, response.data)
         // console.log("vehicles: ", this.globalData.vehicles);

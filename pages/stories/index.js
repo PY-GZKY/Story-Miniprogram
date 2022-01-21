@@ -32,7 +32,7 @@ Page({
   },
   onLoad() {
     wx.request({
-      url: 'http://127.0.0.1:8000/stories',
+      url: 'https://tplan.cc/stories',
       success: (response) => {
         // console.log("stories: ", response.data);
         this.setData({
