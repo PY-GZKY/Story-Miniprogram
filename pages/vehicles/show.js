@@ -6,11 +6,15 @@ Page({
     entity: null
   },
   testDrive,
+
   preview(event) {
     const slidesName = event.target.dataset.slides
     const index = event.target.dataset.index
 
-    const slides = this.data.entity.meta[slidesName]
+    // console.log("slidesName: ", slidesName);
+    // console.log("index: ", index);
+
+    const slides = this.data.entity[slidesName]
     const images = []
 
     slides.map((item) => {
@@ -24,10 +28,11 @@ Page({
   },
   onLoad(options) {
     const id = options.id
-    const entity = app.globalData.vehicles.filter((item) => {
+    // console.log("options: ", options);
+    const entity = app.globalData.vehicles.results.filter((item) => {
       return item.id == id
     })
-
+    // console.log("entity: ", entity);
     this.setData({
       entity: entity[0]
     })

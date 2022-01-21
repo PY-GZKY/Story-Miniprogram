@@ -28,7 +28,7 @@
     }
 
     .card image, .card video {
-      height: 36vh;
+      height: 32vh;
     }
 
     .card .content {

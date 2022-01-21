@@ -1,0 +1,9 @@
+var bar = function parseTime(utc) {
+  var date_ = getDate(utc);
+  var localeString = date_.toLocaleString();
+  return localeString;
+}
+
+module.exports = {
+  bar: bar
+}

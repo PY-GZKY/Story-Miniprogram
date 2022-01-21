@@ -5,8 +5,9 @@ Page({
     entity: null
   },
   onLoad(options) {
+    // console.log("options: ", options)
     const id = options.id
-    const entity = app.globalData.stories.filter((item) => {
+    const entity = this.stories.results.filter((item) => {
       return item.id == id
     })
 

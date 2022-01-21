@@ -3,7 +3,7 @@
   }
 
   .cover image, .cover video {
-    height: 38.2vh;
+    height: 30vh;
   }
 
   .cover .content {

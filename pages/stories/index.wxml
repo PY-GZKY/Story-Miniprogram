@@ -6,7 +6,7 @@
       poster="{{ item.image }}"
       src="{{ item.video }}"
       objectFit="cover"
-      duration="{{ item.duration_raw }}" />
+      duration="269" />
     <image
       hidden="{{ currentVid == item.id }}"
       data-vid="{{ item.id }}"
@@ -15,7 +15,7 @@
       mode="aspectFill">
       <view class="label">{{ item.duration }}</view>
     </image>
-    <navigator url="/pages/stories/show?id={{ item.id }}" hover-class="none">
+    <navigator url="#" hover-class="none">
       <view class="content">
         <view class="header">
           {{ item.header }}
