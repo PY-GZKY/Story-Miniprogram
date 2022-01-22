@@ -6,7 +6,7 @@
     "pages/vehicles/show"
   ],
   "window": {
-    "navigationBarTitleText": "故事集",
+    "navigationBarTitleText": "蓝青集",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black"
   },

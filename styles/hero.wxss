@@ -3,7 +3,7 @@
   }
 
   .hero image, .hero video {
-    height: 32.2vh;
+    height: 38vh;
   }
 
   .hero.white {
@@ -12,7 +12,7 @@
 
   .hero.small .header {
     font-size: 56rpx;
-    margin-bottom: 48rpx
+    margin-bottom: 38rpx
   }
 
   .hero.small .sub-header {
@@ -36,7 +36,7 @@
   }
 
   .hero .header {
-    font-size: 72rpx;
+    font-size: 68rpx;
     font-weight: bold;
     margin: 0 12% 8px;
   }
