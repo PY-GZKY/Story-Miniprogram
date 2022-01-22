@@ -4,24 +4,23 @@
   <view class="content">
     <view class="header">
       {{ entity.header }}
-      <view class="sub-header">
+      <!-- <view class="sub-header">
         {{ entity.sub_header }}
-      </view>
+      </view> -->
     </view>
     <view class="meta">{{ tick.bar(entity.created) }}</view>
   </view>
 </view>
 
-<swiper class="section story white" indicator-dots="{{ true }}">
-  <block wx:for="{{ entity.vehicles }}" wx:key="key">
+<swiper class="section_ story white" indicator-dots="{{ true }}">
+  <view wx:for="{{ entity.vehicles }}" wx:key="key">
     <swiper-item>
       <view class="content">
-        <!-- <view class="sub-header">外观</view> -->
         <view class="header">{{ item.header }}</view>
         <view class="description">{{ item.description }}</view>
       </view>
       <image bindtap="preview" data-slides="vehicles" data-index="{{ index }}" src="{{ item.image }}"
         mode="aspectFill" />
     </swiper-item>
-  </block>
+  </view>
 </swiper>

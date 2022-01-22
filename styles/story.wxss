@@ -1,4 +1,14 @@
-.story {
+/* .story {
+  } */
+  .story {
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+  }
+
+
+
+  .section_ {
+    height: 58vh;
   }
 
   .story.white {
@@ -8,7 +18,7 @@
   .story .content {
     display: flex;
     flex-direction: column;
-    height: 14vh;
+    height: 10vh;
     padding-top: 10%;
     text-align: center;
   }
@@ -16,7 +26,7 @@
   .story .header {
     font-size: 42rpx;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 6px;
   }
 
   .story .sub-header {
@@ -28,9 +38,11 @@
   }
 
   .story .description {
+    font-size: 24rpx;
     padding: 0 12%;
   }
 
   .story image, .story video {
+    border-radius:5px; 
     height: 36vh;
   }

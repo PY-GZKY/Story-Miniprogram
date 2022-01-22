@@ -8,7 +8,7 @@
     "es6": true,
     "enhance": true,
     "postcss": true,
-    "preloadBackgroundData": true,
+    "preloadBackgroundData": false,
     "minified": true,
     "newFeature": false,
     "coverView": true,
@@ -31,7 +31,7 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
-    "useIsolateContext": false,
+    "useIsolateContext": true,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
