@@ -4,6 +4,17 @@ Page({
   data: {
     entity: null
   },
+  storieDetail() {
+    wx.request({
+      url: 'https://tplan.cc/vehicles',
+      success: (response) => {
+        app.globalData.vehicles = response.data.results;
+        this.setData({
+          entities: app.globalData.vehicles
+        });
+      }
+    })
+  },
   onLoad(options) {
     // console.log("options: ", options)
     const id = options.id
