@@ -27,18 +27,33 @@ Page({
     })
   },
   onLoad(options) {
+    // console.log(options);
     const id = options.id
-    // console.log("options: ", options);
     const entity = app.globalData.vehicles.results.filter((item) => {
       return item.id == id
     })
     // console.log("entity: ", entity);
     this.setData({
-      entity: entity[0]
+      entity: entity[0],
     })
-
     wx.setNavigationBarTitle({
       title: this.data.entity.header
     })
-  }
+  },
+
+  onShareAppMessage: function (options) {
+    // console.log("options: ", options);
+    console.log("share_title: ", this.data.entity.header);
+    return {
+      title: this.data.entity.header,
+      desc: this.data.entity.header,
+      path: 'pages/vehicles/show?id=' + this.data.entity.id  
+    }
+  },
+  onShareTimeline: function () {
+    return {
+      title: this.data.entity.header,
+      query: 'id=' + this.data.entity.id  
+    }
+  },
 })

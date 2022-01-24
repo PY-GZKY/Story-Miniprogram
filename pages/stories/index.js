@@ -41,5 +41,13 @@ Page({
       }
     });
 
-  }
+  },
+
+  onShareAppMessage: function (options) {
+    return {
+      title: '蓝青集',
+      desc: '蓝青集、故事合集',
+      path: 'pages/stories/index'
+    }
+  },
 })

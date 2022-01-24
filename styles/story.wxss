@@ -6,7 +6,6 @@
   }
 
 
-
   .section_ {
     height: 58vh;
   }
@@ -19,7 +18,7 @@
     display: flex;
     flex-direction: column;
     height: 10vh;
-    padding-top: 10%;
+    padding-top: 6%;
     text-align: center;
   }
 
