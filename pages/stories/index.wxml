@@ -1,6 +1,7 @@
 <view class="cards">
   <view class="card" hover-class="hover" wx:for="{{ entities }}" wx:key="id">
     <video
+      wx:if="{{ item.mp4 }}"
       hidden="{{ currentVid !== item.id }}"
       id="{{ item.id }}"
       poster="{{ item.image }}"
