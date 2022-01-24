@@ -8,7 +8,8 @@
   "window": {
     "navigationBarTitleText": "蓝青集",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "selectedColor": "#000000",
