@@ -26,10 +26,11 @@ Page({
       current: images[index]
     })
   },
+
   onLoad(options) {
     // console.log(options);
     const id = options.id
-    const entity = app.globalData.vehicles.results.filter((item) => {
+    const entity = app.globalData.vehicles.filter((item) => {
       return item.id == id
     })
     // console.log("entity: ", entity);
@@ -47,13 +48,13 @@ Page({
     return {
       title: this.data.entity.header,
       desc: this.data.entity.header,
-      path: 'pages/vehicles/show?id=' + this.data.entity.id  
+      path: 'pages/vehicles/show?id=' + this.data.entity.id
     }
   },
   onShareTimeline: function () {
     return {
       title: this.data.entity.header,
-      query: 'id=' + this.data.entity.id  
+      query: 'id=' + this.data.entity.id
     }
   },
 })

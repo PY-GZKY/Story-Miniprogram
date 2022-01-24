@@ -1,12 +1,11 @@
 App({
   globalData: {
     slides: {},
-    vehicles: {}
-
+    vehicles: {},
+    stories: {}
   },
   onLaunch() {
-    this.vehicles();
-    this.slides();
+
   },
 
   //刷新
@@ -34,31 +33,4 @@ App({
   //   this.onRefresh();
   // },
 
-  slides() {
-    wx.request({
-      url: 'https://tplan.cc/slides',
-      success: (response) => {
-        Object.assign(this.globalData.slides, response.data)
-        // console.log("slides: ", this.globalData.slides);
-        const currentPages = getCurrentPages()
-        if (currentPages.length !== 0) {
-          currentPages[currentPages.length - 1].onLoad()
-        }
-      }
-    })
-  },
-
-  vehicles() {
-    wx.request({
-      url: 'https://tplan.cc/vehicles',
-      success: (response) => {
-        Object.assign(this.globalData.vehicles, response.data)
-        // console.log("vehicles: ", this.globalData.vehicles);
-        const currentPages = getCurrentPages()
-        if (currentPages.length !== 0) {
-          currentPages[currentPages.length - 1].onLoad()
-        }
-      }
-    })
-  }
 })
