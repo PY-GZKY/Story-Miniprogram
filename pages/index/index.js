@@ -5,7 +5,7 @@ Page({
   data: {
     slides: {},
     entities: {},
-    page: 1,
+    page: 2,
     theEnd: false
   },
   testDrive,
@@ -62,7 +62,7 @@ Page({
    */
   slides() {
     wx.request({
-      url: 'https://tplan.cc/slides',
+      url: `${app.globalData.bash_api}/slides`,
       success: (response) => {
         app.globalData.slides = response.data.results;
         this.setData({
@@ -74,7 +74,7 @@ Page({
 
   vehicles() {
     wx.request({
-      url: 'https://tplan.cc/vehicles',
+      url: `${app.globalData.bash_api}/vehicles`,
       success: (response) => {
         app.globalData.vehicles = response.data.results;
         this.setData({
@@ -98,15 +98,14 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '蓝青集',
-      desc: '蓝青集、记录生活轶事',
-      path: 'pages/index/index'
+      path: 'pages/index/index',
+      imageUrl: this.data.slides[0].image
     }
   },
 
   onShareTimeline: function () {
     return {
       title: '蓝青集、记录生活轶事',
-      // imageUrl: 'https://tplan.cc/media/images/2022/01/21/关二.jpg'
     }
   },
 })

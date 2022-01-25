@@ -3,34 +3,8 @@ const app = getApp()
 Page({
   data: {
     stories: null,
-    currentVid: null,
-    currentVideo: null,
-    vDuration: null,
-    page: 1,
+    page: 2,
     theEnd: false
-  },
-
-  // 获取视频时长
-  getLength(e) {
-    e.detail.duration = parseInt(e.detail.duration)
-    //处理时间格式并存放到data中
-    this.setData({
-      vDuration: parseInt(e.detail.duration / 60) + ":" + e.detail.duration % 60
-    })
-
-  },
-  play(event) {
-    // console.log("event", event)
-    if (this.data.currentVid !== null) {
-      this.data.currentVideo.pause()
-    }
-    const currentVideo = wx.createVideoContext(`${ event.target.dataset.vid }`)
-    currentVideo.play()
-
-    this.setData({
-      currentVideo,
-      currentVid: event.target.dataset.vid
-    })
   },
 
   /**
@@ -42,7 +16,7 @@ Page({
       title: '加载中'
     });
     wx.request({
-      url: 'https://tplan.cc/stories/?page=' + this.data.page,
+      url: `${app.globalData.bash_api}/stories/?page=${this.data.page}`,
       success: (response) => {
         console.log(response);
         if (response.statusCode == 404) {
@@ -75,7 +49,7 @@ Page({
 
   onLoad() {
     wx.request({
-      url: 'https://tplan.cc/stories',
+      url: `${app.globalData.bash_api}/stories`,
       success: (response) => {
         app.globalData.stories =  response.data.results;
         this.setData({
@@ -99,8 +73,13 @@ Page({
   onShareAppMessage: function (options) {
     return {
       title: '蓝青集',
-      desc: '蓝青集、故事合集',
-      path: 'pages/stories/index'
+      path: 'pages/stories/index',
+      imageUrl: this.data.stories[0].image
+    }
+  },
+  onShareTimeline: function () {
+    return {
+      title: '蓝青集、故事合集'
     }
   },
 })

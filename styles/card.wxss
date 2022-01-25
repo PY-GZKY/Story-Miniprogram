@@ -1,5 +1,5 @@
 .cards {
-    padding: 16px;
+    padding: 12px;
   }
 
   .card {
@@ -32,7 +32,7 @@
     }
 
     .card .content {
-      padding: 48rpx 48rpx 64rpx;
+      padding: 26rpx 48rpx 8rpx;
     }
 
     .card .header {

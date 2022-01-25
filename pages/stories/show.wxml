@@ -1,15 +1,21 @@
-<view class="section hero small">
-
+<wxs src="../../modules/tick.wxs" module="tick"></wxs>
+<view class="section_hero hero small white">
   <view class="content centered">
     <view class="header">
       {{ entity.header }}
-      <!-- <view class="sub-header">{{ entity.original_header }}</view> -->
     </view>
-    <view wx:for="[1,2,3]" wx:key="key">
-      <image data-vid="{{ entity.id }}" src="{{ entity.image }}" mode="aspectFill">
-        <view class="label">{{ entity.duration }}</view>
-      </image>
+    <view class="sub-header">{{ entity.description }}</view>
+    <view class="description">记录于 {{ tick.bar(entity.created) }}</view>
   </view>
-    <!-- <view class="description">{{ entity.description }}</view> -->
+
+  <view class="cards">
+    <view class="card" hover-class="hover" wx:for="{{ entity.stories }}" wx:key="id">
+      <image bindtap="preview" data-index="{{ index }}" src="{{ item.image }}" mode="aspectFill" />
+      <view class="content">
+        <view class="sub-header">
+          {{ item.header }}
+        </view>
+      </view>
+    </view>
   </view>
 </view>

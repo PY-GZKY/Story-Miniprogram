@@ -43,12 +43,11 @@ Page({
   },
 
   onShareAppMessage: function (options) {
-    // console.log("options: ", options);
-    console.log("share_title: ", this.data.entity.header);
+    // console.log("share_title: ", this.data.entity.header);
     return {
       title: this.data.entity.header,
-      desc: this.data.entity.header,
-      path: 'pages/vehicles/show?id=' + this.data.entity.id
+      path: 'pages/vehicles/show?id=' + this.data.entity.id,
+      imageUrl: this.data.entity.image
     }
   },
   onShareTimeline: function () {

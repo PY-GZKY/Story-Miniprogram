@@ -1,15 +1,15 @@
+<wxs src="../../modules/tick.wxs" module="tick"></wxs>
 <view class="cards">
   <view class="card" hover-class="hover" wx:for="{{ stories }}" wx:key="id">
     <navigator url="/pages/stories/show?id={{ item.id }}" hover-class="none">
-      <image data-vid="{{ item.id }}" bindtap="play" src="{{ item.image }}" mode="aspectFill">
-        <view class="label">{{ item.duration }}</view>
+      <image data-vid="{{ item.id }}" src="{{ item.image }}" mode="aspectFill">
+        <view class="label">{{ tick.bar(item.created) }}</view>
       </image>
       <view class="content">
         <view class="header">
           {{ item.header }}
         </view>
         <view class="description">{{ item.description }}</view>
-        <view class="meta">{{ item.meta.price }}</view>
       </view>
     </navigator>
   </view>

@@ -4,17 +4,24 @@ Page({
   data: {
     entity: null
   },
-  storieDetail() {
-    wx.request({
-      url: 'https://tplan.cc/vehicles',
-      success: (response) => {
-        app.globalData.vehicles = response.data.results;
-        this.setData({
-          entities: app.globalData.vehicles
-        });
-      }
+
+  preview(event) {
+    const storiesName = event.target.dataset.stories
+    const index = event.target.dataset.index
+    // console.log("this.data.entity ==== ",  this.data.entity.stories);
+    const stories = this.data.entity.stories;
+    const images = []
+
+    stories.map((item) => {
+      images.push(item.image)
+    })
+
+    wx.previewImage({
+      urls: images,
+      current: images[index]
     })
   },
+
   onLoad(options) {
     // console.log("options: ", options)
     const id = options.id
@@ -29,5 +36,23 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.entity.header
     })
-  }
+  },
+
+    /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (options) {
+    return {
+      title: this.data.entity.header,
+      path: 'pages/stories/show?id=' + this.data.entity.id,
+      imageUrl: this.data.entity.image
+    }
+  },
+
+  onShareTimeline: function () {
+    return {
+      title: this.data.entity.header,
+      query: 'id=' + this.data.entity.id
+    }
+  },
 })
